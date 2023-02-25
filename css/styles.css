@@ -110,6 +110,7 @@ ul {
 }
 
 .header-link {
+    position: relative;
     display: block;
     padding-top: 24px;
     padding-bottom: 24px;
@@ -120,9 +121,24 @@ ul {
     text-decoration: none;
 }
 
+.header-link::after {
+    position: absolute;
+    bottom: 0;
+    /*display: block;*/
+    left: 0;
+    width: 100%;
+    height: 4px;
+    /*background-color: currentColor;*/
+    border-radius: 2px;
+    opacity: 0;
+    content: '';
+
+}
+
 .header-link:hover, 
 .header-link:focus {
     color: var(--pressed-state);
+    opacity: 1;
 }
 
 .active-link {
@@ -463,7 +479,7 @@ ul {
     background-color: var(--color-success);
 }
 
-.social-icon-large{
+.social-icon-large {
     width: 24px;
     height: 24px;
 }
