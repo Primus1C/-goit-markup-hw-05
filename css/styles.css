@@ -500,10 +500,16 @@ ul {
     background-color: rgba(46, 47, 66, 0.4);
 }
 
+.backdrop.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
 .modal {
     position: absolute;
-    min-width: 408px;
-    min-height: 576px;
+    width: 408px;
+    height: 576px;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -523,6 +529,7 @@ ul {
     height: 24px;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
+        cursor: pointer;
 }
 
 .close-icon {
