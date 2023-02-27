@@ -121,6 +121,11 @@ ul {
     text-decoration: none;
 }
 
+.header-link:hover,
+.header-link:focus {
+    color: var(--pressed-state);
+}
+
 .header-link::after {
     position: absolute;
     bottom: 0;
@@ -130,13 +135,12 @@ ul {
     height: 4px;
     background-color: currentColor;
     border-radius: 2px;
-    /*opacity: 0;*/
+    opacity: 0;
     content: '';
-
 }
 
-.header-link:hover, 
-.header-link:focus {
+.header-link:hover::after, 
+.header-link:focus::after {
     color: var(--pressed-state);
     opacity: 1;
 }
